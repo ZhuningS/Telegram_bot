@@ -39,7 +39,7 @@ telegram.getMe().then((...args) => {
   console.log('here is ' + JSON.stringify(args));
 });
 
-const welcomeMarkdown = `这里是 @awesomeopensource  投稿机器人，点击下面的'我要投稿'按钮开始投稿。`;
+const welcomeMarkdown = `这里是TG频道助手机器人，信息推送、频道留言、私信、投稿。 使用过程有问题请 /help .点击下面的'我要投稿'按钮开始投稿。`;
 
 const aboutMarkdown = `*关于此Bot*
 这里是此频道的投稿机器人。提供交流，反馈功能。
@@ -341,7 +341,7 @@ bot.action(new RegExp(`^${ignoreButtonAction} (\\w{16})$`), async (ctx) => {
 bot.action(fetchSourcecodeButtonAction, async (ctx) => {
   await ctx.replyWithDocument({
     source: fs.createReadStream(__filename),
-    filename: 'awesomeopensource_bot.js'
+    filename: 'assistant3721_bot.js'
   });
   await ctx.answerCbQuery();
 })
